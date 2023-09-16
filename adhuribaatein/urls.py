@@ -16,16 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from services import views
+from services import views as services_views
+from user import views as user_views
 
 urlpatterns = [
     path('admin-panel/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('about-us/', views.about, name='about'),
-    path('registration/', views.registration, name='registration'),
-    path('love/', views.love, name='love'),
-    path('sad/', views.sad, name='sad'),
-    path('romantic/', views.romantic, name='romantic'),
-    path('story/', views.story, name='story'),
-    path('get_ip/', views.get_user_ip, name='get_user_ip'),
+    path('', services_views.home, name='home'),
+    path('about-us/', services_views.about, name='about'),
+    path('registration/', user_views.registration, name='registration'),
+    path('login/', user_views.loginsuer, name='loginsuer'),
+    path('love/', services_views.love, name='love'),
+    path('sad/', services_views.sad, name='sad'),
+    path('romantic/', services_views.romantic, name='romantic'),
+    path('story/', services_views.story, name='story'),
+    path('camera/', services_views.camera, name='camera'),
+    # path('get_ip/', services_views.get_user_ip, name='get_user_ip'),
 ]

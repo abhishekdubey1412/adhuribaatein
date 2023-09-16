@@ -84,14 +84,14 @@ button:hover {
     transform: scale(.6);
 }
 
-#chk:checked~.login {
+.login.active {
     transform: translateY(-500px);
 }
 
-#chk:checked~.login label {
+.login.active label {
     transform: scale(1);
 }
 
-#chk:checked~.signup label {
+.signup.active label {
     transform: scale(.6);
 }
