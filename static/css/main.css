@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Yantramanav:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Yantramanav;
+}
+
+.container {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(40deg, rgb(216, 0, 151), rgb(212, 212, 212));
+    transition: 0.6s;
+}
+
+.toggle {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 21px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.toggle div {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu a,
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.main_section {
+    margin-top: 40px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo,
+.menu {
+    padding: 20px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1%;
+}
+
+.menu ul li {
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 16px;
+}
+
+.menu ul li:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.menu ul li:last-child {
+    padding: 0;
+    margin-left: 10px;
+}
+
+.menu ul li:last-child:hover {
+    color: transparent;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    font-family: Arial, Helvetica, sans-serif !important;
+    padding: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.profile-image {
+    height: 50px;
+    width: 50px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: small;
+}
+
+.containt {
+    max-height: 200px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.containt::-webkit-scrollbar {
+    width: 5px;
+    background-color: #ffffff;
+}
+
+.containt::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, rgb(159, 5, 0), rgb(216, 0, 151));
+}
+
+.containt p {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.card_share_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px 0 0;
+}
+
+.card_share_btn svg,
+.social_media_link svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.pagination {
+    margin-bottom: 40px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: .3s;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-image: linear-gradient(45deg, rgb(159, 5, 0), rgb(216, 0, 151));
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-image: linear-gradient(40deg, rgb(216, 0, 151), rgb(212, 212, 212));
+}
+
+aside {
+    width: 30%;
+}
+
+.login_user_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 60px;
+}
+
+.profile_pic {
+    width: 69px;
+    margin-right: 11px;
+}
+
+.profile_pic img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user_data,
+.post_follower {
+    display: flex;
+}
+
+.user_data h3 {
+    padding: 0px 12px 4px 11px;
+}
+
+.post_follower p {
+    padding: 0 36px 0 13px;
+}
+
+.login_user_social {
+    display: flex;
+    width: 74%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.login_user_social svg {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    background-image: linear-gradient(18deg, rgb(159, 5, 0), rgb(216, 0, 151));
+    color: rgb(255, 255, 255);
+}
+
+.footer_divs {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer_divs h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.footer_contact,
+.footer_detail,
+.footer_opening {
+    width: 33%;
+}
+
+.social_media_link {
+    padding-top: 20px;
+}
+
+.footer_divs a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact_link {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 1082px) {
+    .container {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 962px) {
+    .container {
+        max-width: 100vw;
+    }
+}
+
+@media (max-width: 882px) {
+    .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 826px) {
+    .card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 745px) {
+    .card {
+        width: 273px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    article {
+        width: -webkit-fill-available;
+    }
+
+    .footer_divs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_contact,
+    .footer_detail,
+    .footer_opening {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 635px) {
+
+    .navbar {
+        background-image: linear-gradient(240deg, rgb(216, 0, 151), rgb(212, 212, 212));
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .active_nav {
+        height: 315px;
+        background-image: linear-gradient(240deg, rgb(216, 0, 151), rgb(212, 212, 212));
+        flex-direction: column;
+        align-items: normal;
+        transition: 0.6s;
+    }
+
+    .active_toggle {
+        justify-content: center;
+        overflow: hidden;
+        height: 25px;
+    }
+
+    .active_toggle div:first-child {
+        transform: rotate(-50deg);
+        transition: 0.6s;
+    }
+
+    .active_toggle div:last-child {
+        transform: rotate(50deg);
+        transition: 0.6s;
+    }
+
+    .menu ul li:last-child {
+        padding: 10px 16px;
+        margin: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 553px) {
+    .card {
+        width: 350px;
+    }
+
+    article {
+        width: 0 auto;
+    }
+}
+
+@media (max-width: 355px) {
+    section {
+        padding: 0 10px;
+    }
+}
