@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% load static %}
+{% block main %}
+<section class="user_section container">
+    <div class="user_dashboard_imag">
+        <div class="profile_img">
+            <img src="/media/{{user_data.image}}" alt="">
+        </div>
+        <div class="user_id">
+            <div class="user_box">
+                <h2>{{user_data.username}}</h2>
+                <form action="{% url 'user_dashboard' %}" method="POST">
+                {% csrf_token %}
+                    <button type='submit' name='edit' value="{{user_data.username}}">Edit profile</button>
+                    <button>Setting</button>
+                </form>
+            </div>
+            <div class="post_data">
+                <div class="post_count">
+                    <p><span class="couter_span"><b>23</b></span>Post</p>
+                </div>
+                <div class="followes">
+                    <p><span class="couter_span"><b>23</b></span>followes</p>
+                </div>
+                <div class="following">
+                    <p><span class="couter_span"><b>23</b></span>following</p>
+                </div>
+            </div>
+            <div class="username_disription">
+                <h3>{{user_data.name}}</h3>
+                <pre>{{user_data.description}}</pre>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}

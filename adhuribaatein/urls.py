@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from services import views as services_views
 from user import views as user_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin-panel/', admin.site.urls),
@@ -29,6 +31,12 @@ urlpatterns = [
     path('sad/', services_views.sad, name='sad'),
     path('romantic/', services_views.romantic, name='romantic'),
     path('story/', services_views.story, name='story'),
-    path('camera/', services_views.camera, name='camera'),
+    path('user_dashboard/', user_views.user_dashboard, name='user_dashboard'),
+    path('edit_user/', user_views.edit_user, name='edit_user'),
+    # path('camera/', services_views.camera, name='camera'),
     # path('get_ip/', services_views.get_user_ip, name='get_user_ip'),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

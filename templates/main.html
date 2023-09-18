@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="keywords" content="Your keywords here">
-    <meta name="description" content={{description}}>
+    <meta name="description" content={{page_data.description}}>
     <meta name="author" content="Your author here">
     <link rel="icon" type="image/x-icon" href='{% static "image/favicon.png" %}'>
     <link rel="stylesheet" href='{% static "css/main.css" %}'>
     <link rel="stylesheet" href='{% static "css/login.css" %}'>
+    <link rel="stylesheet" href='{% static "css/user_dashboard.css" %}'>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-    <title>{{title}}</title>
+    <title>{{page_data.title}}</title>
 </head>
 
 <body>
@@ -27,7 +28,11 @@
                     <li><a href='{% url "sad" %}'>Sad</a></li>
                     <li><a href='{% url "romantic" %}'>Romantic</a></li>
                     <li><a href='{% url "story" %}'>Story</a></li>
-                    <li><a href='{% url "registration" %}'><svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                    <li>{% if page_data.active_user %}
+                        <a href='{% url "user_dashboard" %}'>
+                    {% else %}
+                    <a href='{% url "registration" %}'>
+                    {% endif %}<svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
